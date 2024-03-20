@@ -17,6 +17,7 @@ function addBookToLibrary(book) {
 }
 
 function displayBooks() {
+    bookshelf.innerHTML = '';
 
     /* Display Books and Remove Book Buttons */
     for (i = 0; i < myLibrary.length; i++) {
@@ -33,9 +34,9 @@ function displayBooks() {
         removeButton.appendChild(buttonText);
         removeButton.classList.add("remove");
         removeButton.dataset.number = i;
-    
-        bookshelf.appendChild(newBook);
+        
         newBook.appendChild(removeButton);
+        bookshelf.appendChild(newBook);
     }
 
     /* Add Event Listeners to Remove Book Buttons */
@@ -50,14 +51,15 @@ function displayBooks() {
 }
 
 function removeBook(index) {
-    myLibrary.splice(index, 1);
     let toRemove = document.getElementById(index);
-    toRemove.remove();
+    bookshelf.removeChild(toRemove);
+    myLibrary.splice(index, 1);
 
     displayBooks();
 }
 
 hobbit = new Book("The Hobbit", "J.R.R Tolkien");
+dune = new Book("Dune", "Frank Herbert");
 addBookToLibrary(hobbit);
+addBookToLibrary(dune);
 displayBooks();
-
