@@ -1,0 +1,76 @@
+:root {
+    --sidebar-bg: #42bb7d;
+    --main-bg: #9bc5b0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Monaco";
+}
+
+h3 {
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    position: absolute;
+    writing-mode: horizontal-tb;
+    top: 350px;
+    background-color: #6b0101;
+    color: white;
+    height: 24px;
+    font-weight: bold;
+    font-family: "Monaco";
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #662424;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+#bookshelf-container {
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.book {
+    width: 75px;
+    height: 300px;
+    border: 1px solid black;
+    writing-mode: vertical-rl;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: thistle;
+    margin: 0 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
