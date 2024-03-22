@@ -17,6 +17,23 @@
 
         <div class="sidebar">
             <h3>Add a new book</h3>
+
+            <form action="" method="POST" id="new-book-form">
+                <div class="text-input">
+                    <label for="title">TITLE</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div class="text-input">
+                    <label for="author">AUTHOR</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+                <div class="checkbox-input">
+                    <label for="read">READ</label>
+                    <input type="checkbox" name="read" id="read">
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
         </div>
 
     </div>

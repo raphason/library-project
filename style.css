@@ -16,17 +16,7 @@ h3 {
 }
 
 button {
-    position: absolute;
-    writing-mode: horizontal-tb;
-    top: 350px;
-    background-color: #6b0101;
-    color: white;
-    height: 24px;
-    font-weight: bold;
-    font-family: "Monaco";
-    font-size: 12px;
-    border: none;
-    border-radius: 4px;
+    position: relative;
 }
 
 button:hover {
@@ -68,9 +58,69 @@ button:active {
     text-align: center;
     font-size: 14px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.remove-button {
+    padding: 0;
+    writing-mode: horizontal-tb;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 1px black;
+    background-color: red;
+    color: white;
+    font-size: 8px;
+    position:absolute;
+    top: 385px;
+}
+
+.read-button {
+    writing-mode: horizontal-tb;
+    top: 350px;
+    background-color: aliceblue;
+    color: black;
+    height: 24px;
+    font-weight: bold;
+    font-family: "Monaco";
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    position:absolute;
+    top: 350px;
+}
+
+.read-button:hover {
+    background-color: lightgray;
 }
 
 .sidebar {
     background-color: var(--sidebar-bg);
     box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.text-input, .checkbox-input {
+    font-size: 12px;
+    display: flex;
+    margin: 10px;
+}
+
+.text-input {
+    flex-direction: column;
+}
+
+.checkbox-input {
+    align-items: center;
+}
+
+.submit-button {
+    font-family: "Monaco";
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    margin: 10px;
+    background-color: darkgreen;
+    color: aliceblue;
+    font-weight: bold;
 }
