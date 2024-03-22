@@ -103,9 +103,3 @@ newBookForm.addEventListener("submit", (e) => {
     addBookToLibrary(newBook);
     displayBooks();
 });
-
-hobbit = new Book("The Hobbit", "J.R.R Tolkien", false);
-dune = new Book("Dune", "Frank Herbert", true);
-addBookToLibrary(hobbit);
-addBookToLibrary(dune);
-displayBooks();
